@@ -397,17 +397,16 @@ ggplot(data = grafico_tasa_aciertos)+
 ######################################################
 
 # Hacemos PCA y guardamos el resultado porque tarda mucho en correr
-#Ascaled = scale(A)
+Ascaled = scale(A)
 # 
-#pca <- prcomp(Ascaled)
+pca <- prcomp(Ascaled)
+## Tarda en correr. Si uno quiere guardarlo:
 #saveRDS(pca, "resultadosPCA.RDS")
 
 
 
 # Explorar resultados
 
-
-pca <- readRDS("C:/Users/ian bounos/OneDrive/Escritorio/DISCURSOS CRISTINA/datamining/resultadosPCA.RDS")
 summary(pca)
 plot(pca)
 
